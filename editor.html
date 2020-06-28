@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://cdn.tiny.cloud/1/vs60bl83jbgvhfjd70tytpmztacgh4jswsg2e5uvg5gn5p3n/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <script>
+      tinymce.init({
+        plugins: "table",
+        menubar: "table",
+        selector: "#myEditor",
+        table_toolbar:
+          "tableprops tabledelete | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol",
+      });
+    </script>
+  </head>
+  <body>
+    <form
+      action="editor.php"
+      method="post"
+      style="display: flex; flex-direction: column;"
+    >
+      <textarea id="myEditor" name="body"> </textarea>
+      <input type="number" placeholder="enter number here" name="number" />
+      <button type="submit" name="submit">submit</button>
+    </form>
+  </body>
+</html>
